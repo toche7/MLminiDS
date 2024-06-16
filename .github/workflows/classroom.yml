@@ -1,7 +1,6 @@
 name: Autograding Tests
 'on':
 - push
-- workflow_dispatch
 - repository_dispatch
 permissions:
   checks: write
@@ -14,16 +13,16 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: testlab1
-      id: testlab1
+    - name: testlab1_1
+      id: testlab1_1
       uses: classroom-resources/autograding-python-grader@v1
       with:
         timeout: 10
         max-score: 10
-        setup-command: pip install pytest
+        setup-command: pip install -r requirements.txt
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        TESTLAB1_RESULTS: "${{steps.testlab1.outputs.result}}"
+        TESTLAB1_1_RESULTS: "${{steps.testlab1_1.outputs.result}}"
       with:
-        runners: testlab1
+        runners: testlab1_1
