@@ -1,4 +1,4 @@
-import hw 
+import ex1 as hw
 import numpy as np
 def test_hwfunc1():
     model, R2 = hw.homework()

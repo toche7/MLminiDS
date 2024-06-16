@@ -10,13 +10,13 @@ def homework():
 
     regEx1 = None
     from sklearn.linear_model import LinearRegression
-    #regEx1 = LinearRegression()
-    #regEx1.fit(X,y)
+    regEx1 = LinearRegression()
+    regEx1.fit(X,y)
 
     #yhat = regEx1.predict(X)
     
     R2 = None
-    #R2 = regEx1.score(X,y)
+    R2 = regEx1.score(X,y)
     
     # plt.scatter(X,y)
     # plt.plot(X,yhat,'r')
