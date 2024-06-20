@@ -8,15 +8,20 @@ def homework():
     X = df[['population']]
     y = df.sale
 
+    # create a linear regression model
     regEx1 = None
     from sklearn.linear_model import LinearRegression
-    #regEx1 = LinearRegression()
-    #regEx1.fit(X,y)
+    # your code here
 
-    #yhat = regEx1.predict(X)
-    
+
+    # fit the model
+    # your code here
+
+
+
+    # determine the performance of the model
     R2 = None
-    #R2 = regEx1.score(X,y)
+    # your code here
     
     # plt.scatter(X,y)
     # plt.plot(X,yhat,'r')
